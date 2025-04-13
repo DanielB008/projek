@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="733efc4d-a2ed-4b03-b37a-512a081ff1bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/characters.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lesson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home_works.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home_works.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +26,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:DanielB008/dz1.git&quot;,
+    &quot;url&quot;: &quot;git@github.com:DanielB008/projek.git&quot;,
     &quot;accountId&quot;: &quot;21c4535a-46d7-4463-a850-2715eadfe5cd&quot;
   }
 }</component>
@@ -148,6 +149,13 @@
       <workItem from="1743956922437" duration="7415000" />
       <workItem from="1744218696703" duration="5664000" />
       <workItem from="1744247010109" duration="5000" />
+      <workItem from="1744247046001" duration="1690000" />
+      <workItem from="1744286265178" duration="10000" />
+      <workItem from="1744513786862" duration="411000" />
+      <workItem from="1744514471497" duration="884000" />
+      <workItem from="1744531283018" duration="4040000" />
+      <workItem from="1744536055603" duration="8000" />
+      <workItem from="1744536070856" duration="45000" />
     </task>
     <servers />
   </component>
