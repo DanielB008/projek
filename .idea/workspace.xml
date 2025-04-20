@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="733efc4d-a2ed-4b03-b37a-512a081ff1bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/characters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/converter.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home_works.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home_works.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lesson.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +155,13 @@
       <workItem from="1744531283018" duration="4040000" />
       <workItem from="1744536055603" duration="8000" />
       <workItem from="1744536070856" duration="45000" />
+      <workItem from="1744536179563" duration="5031000" />
+      <workItem from="1744629958905" duration="62000" />
+      <workItem from="1744631717392" duration="10000" />
+      <workItem from="1744631772350" duration="20000" />
+      <workItem from="1744631803669" duration="4000" />
+      <workItem from="1744893045692" duration="1405000" />
+      <workItem from="1745114792924" duration="4877000" />
     </task>
     <servers />
   </component>

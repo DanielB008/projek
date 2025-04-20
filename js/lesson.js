@@ -60,3 +60,92 @@ interval = setInterval(() => {
     hideTabContent()
     showTabContent(tabIndex)
 }, 3000)
+
+// CONVERTER
+
+// DRY - Dont Repeat Yourself
+// KISS - Keep It Super Simple
+// CRUD - Create Read Update Delete
+// SOLID
+//AJAX
+
+
+const usdInput = document.querySelector('#usd');
+const somInput = document.querySelector('#som');
+const euroInput = document.querySelector('#eur');
+
+const converter = (element, targetElement, targetElement2) => {
+    element.oninput = () => {
+        const request = new XMLHttpRequest();
+        request.open("GET",  "../data/converter.json")
+        request.setRequestHeader("Content-type", "application/json")
+        request.send()
+
+        request.onload = () => {
+            const data = JSON.parse(request.response);
+            const value = parseFloat(element.value);
+
+
+            if (targetElement.id === 'usd' || targetElement2.id === 'usd') {
+                if (element.id === 'som') {
+                    usdInput.value = (value / data.usd).toFixed(2);
+                } else if (element.id === 'eur') {
+                    usdInput.value = (value * data.eur / data.usd).toFixed(2);
+                }
+            }
+            if (targetElement.id === 'som' || targetElement2.id === 'som') {
+                if (element.id === 'usd') {
+                    somInput.value = (value * data.usd).toFixed(2);
+                } else if (element.id === 'eur') {
+                    somInput.value = (value * data.eur).toFixed(2);
+                }
+            }
+            if (targetElement.id === 'eur' || targetElement2.id === 'eur') {
+                if (element.id === 'usd') {
+                    euroInput.value = (value * data.usd / data.eur).toFixed(2);
+                } else if (element.id === 'som') {
+                    euroInput.value = (value / data.eur).toFixed(2);
+                }
+            }
+            if (element.value === '') {
+                targetElement.value = ''
+                targetElement2.value = ''
+            }
+        }
+    }
+}
+
+
+converter(somInput, usdInput, euroInput)
+converter(usdInput, somInput, euroInput)
+converter(euroInput, somInput, usdInput)
+
+
+// converter(somInput, usdInput);
+// converter(usdInput, somInput);
+//
+// converter(somInput, euroInput);
+// converter(euroInput, somInput);
+//
+// converter(usdInput, euroInput);
+// converter(euroInput, usdInput);
+
+
+// card switcher
+
+// const btnNext = document.querySelector('#btn-next')
+// const btnPrev = document.querySelector('#btn-prev')
+// const cardBlock = document.querySelector('.card')
+// let cardId = 0
+//
+//
+// btnNext.onclick = () => {
+//     fetch(`htpps://jsonplaceholder.typicode.com/todos/${cardId}`)
+//         .then((reponse) => reponse.json())
+//         .then((data) => {
+//             cardBlock.innerHTML = `
+//             <p>${data.title}</p>
+//             <p style="color: ${data.completed ? 'green' : 'red'}">${data.complete</p>`
+//                 <span>${data.id}</span>
+//         })
+// }
