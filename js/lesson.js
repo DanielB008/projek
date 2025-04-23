@@ -133,19 +133,42 @@ converter(euroInput, somInput, usdInput)
 
 // card switcher
 
-// const btnNext = document.querySelector('#btn-next')
-// const btnPrev = document.querySelector('#btn-prev')
-// const cardBlock = document.querySelector('.card')
-// let cardId = 0
-//
-//
-// btnNext.onclick = () => {
-//     fetch(`htpps://jsonplaceholder.typicode.com/todos/${cardId}`)
-//         .then((reponse) => reponse.json())
-//         .then((data) => {
-//             cardBlock.innerHTML = `
-//             <p>${data.title}</p>
-//             <p style="color: ${data.completed ? 'green' : 'red'}">${data.complete</p>`
-//                 <span>${data.id}</span>
-//         })
-// }
+const btnNext = document.querySelector('#btn-next')
+const btnPrev = document.querySelector('#btn-prev')
+const cardBlock = document.querySelector('.card')
+let cardId = 1
+const maxId = 200
+const minId = 1
+
+btnNext.onclick = () => {
+    cardId++
+    if (cardId > maxId) {
+        cardId = minId
+    }
+    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            cardBlock.innerHTML = `
+            <p>${data.title}</p>
+            <p style="color: ${data.completed ? "green" : "red"} " >${data.completed}</p>
+            <span>${data.id}</span>
+            `
+        })
+}
+
+btnPrev.onclick = () => {
+    cardId--
+    if (cardId < minId) {
+        cardId = maxId
+    }
+    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            cardBlock.innerHTML = `
+            <p>${data.title}</p>
+            <p style="color: ${data.completed ? "green" : "red"} " >${data.completed}</p>
+            <span>${data.id}</span>
+            `
+        })
+
+}
