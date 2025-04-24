@@ -136,39 +136,80 @@ converter(euroInput, somInput, usdInput)
 const btnNext = document.querySelector('#btn-next')
 const btnPrev = document.querySelector('#btn-prev')
 const cardBlock = document.querySelector('.card')
-let cardId = 1
+let cardId = 0
 const maxId = 200
 const minId = 1
 
-btnNext.onclick = () => {
-    cardId++
-    if (cardId > maxId) {
-        cardId = minId
-    }
-    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
-        .then((response) => response.json())
-        .then((data) => {
-            cardBlock.innerHTML = `
+btnNext.onclick = async () => {
+    try {
+        cardId++
+        if (cardId > maxId) {
+            cardId = minId
+        }
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
+        const data = await response.json()
+        cardBlock.innerHTML = `
             <p>${data.title}</p>
             <p style="color: ${data.completed ? "green" : "red"} " >${data.completed}</p>
             <span>${data.id}</span>
             `
-        })
+    } catch (e) {
+        console.log(e)
+    }
 }
 
-btnPrev.onclick = () => {
-    cardId--
-    if (cardId < minId) {
-        cardId = maxId
-    }
-    fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
-        .then((response) => response.json())
-        .then((data) => {
-            cardBlock.innerHTML = `
+btnPrev.onclick = async () => {
+    try {
+        cardId--
+        if (cardId < minId) {
+            cardId = maxId
+        }
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${cardId}`)
+        const data = await response.json()
+        cardBlock.innerHTML = `
             <p>${data.title}</p>
             <p style="color: ${data.completed ? "green" : "red"} " >${data.completed}</p>
             <span>${data.id}</span>
             `
-        })
-
+    } catch (e) {
+        console.log(e)
+    }
 }
+
+// WEATHER
+// API key - e417df62e04d3b1b111abeab19cea714
+// query params -
+
+const searchInput = document.querySelector('.cityName')
+const searchButton = document.querySelector('#search')
+const cityName = document.querySelector('.city')
+const cityTemp = document.querySelector('.temp')
+
+const API_KEY = "e417df62e04d3b1b111abeab19cea714"
+const BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
+
+searchButton.onclick = async () => {
+    try {
+        if (searchInput.value !== '') {
+            const response = await fetch(`${BASE_URL}?appid=${API_KEY}&q=${searchInput.value}&units=metric&lang=ru`)
+            const data = await response.json()
+            if (data.cod === '404') {
+                cityName.innerHTML = 'Город не найден'
+            } else {
+                cityName.innerHTML = data.name
+                cityTemp.innerHTML = Math.round(data.main.temp) + "&deg;C"
+            }
+
+
+            searchInput.value = ''
+        } else {
+            cityName.innerHTML = 'Введите название города'
+            cityTemp.innerHTML = ''
+        }
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+
+

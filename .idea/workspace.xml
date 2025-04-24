@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="733efc4d-a2ed-4b03-b37a-512a081ff1bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cards.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/cards.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home_works.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home_works.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lesson.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +56,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -49,6 +64,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Downloads/project&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -160,7 +176,10 @@
       <workItem from="1744631772350" duration="20000" />
       <workItem from="1744631803669" duration="4000" />
       <workItem from="1744893045692" duration="1405000" />
-      <workItem from="1745114792924" duration="13782000" />
+      <workItem from="1745114792924" duration="17652000" />
+      <workItem from="1745399361257" duration="10176000" />
+      <workItem from="1745416398359" duration="609000" />
+      <workItem from="1745494505520" duration="68000" />
     </task>
     <servers />
   </component>
