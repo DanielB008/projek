@@ -33,15 +33,15 @@ a {
 }
 
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+/*.wrapper {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    min-height: 100vh;*/
+/*}*/
 
-.footer {
-    margin-top: auto;
-}
+/*.footer {*/
+/*    margin-top: auto;*/
+/*}*/
 
 :root {
     --orange: orange;
@@ -143,4 +143,52 @@ div {
     font-weight: 600;
     background-color: transparent;
     color: orange;
+}
+
+
+.card_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.card h3 {
+    font-size: 18px;
+    margin: 15px 10px 10px;
+    text-align: center;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px 15px;
+    text-align: center;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
